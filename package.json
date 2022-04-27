@@ -5,11 +5,12 @@
   "name": "litcomponents",
   "version": "1.0.0",
   "main": "litcomponents.html",
-  "devDependencies": {},
+  "devDependencies": {
+    "@web/dev-server": "^0.1.30"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
 	"start": "npx wds --node-resolve --watch --open index.html"
-
   },
   "author": "",
   "license": "ISC",
