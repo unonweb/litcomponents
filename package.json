@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "lit": "^2.2.1"
+  },
+  "name": "litcomponents",
+  "version": "1.0.0",
+  "main": "litcomponents.html",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "npx wds --node-resolve --watch --open index.html"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

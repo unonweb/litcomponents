@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
+        <title>litcomponents</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'/>
+        <script type="module" src="main.js"></script>
+		<style>
+			@font-face {
+			font-family: 'NimbusSansReg';
+			src:  url('./fonts/NimbusSanL-Reg.otf') format('opentype');
+			}
+			html {
+			font-family: NimbusSansReg;
+			}
+		</style>
+    </head>
+    <body>
+
+		<h4>un-dropdown</h4>
+		<un-dropdown title="menu" theme="vaadin-1">
+			<div>Profile</div>
+			<div>Preferences</div>
+			<div>Community</div>
+			<hr slot="separator">
+			<div slot="last">Sign Out</div>
+		</un-dropdown>
+
+		<h4>un-button</h4>
+		<un-button theme="vaadin-1" btntxt="&#10005;"></un-button>
+
+		<h4>un-input</h4>
+		<un-input theme="vaadin-1" placeholder="message" type="text" label="Enter"></un-input>
+
+		<h4>un-message-input</h4>
+		<un-message-input theme="vaadin-1" placeholder="message" label="Enter" btnTxt="click"></un-message-input>
+
+		<h4>un-accordion</h4>
+		<un-accordion title="Playlists" theme="fancy" opentype="drop">
+			<div>I have an accordion and am animating the height for a show reveal - the issue is the height which i need to set to auto as the information is different lengths.</div>
+		</un-accordion>
+		<un-accordion title="Playlists" theme="vaadin" opentype="drop">
+			<div>I have an accordion and am animating the height for a show reveal - the issue is the height which i need to set to auto as the information is different lengths.</div>
+			<div>I have an accordion and am animating the height for a show reveal - the issue is the height which i need to set to auto as the information is different lengths.</div>
+		</un-accordion>
+
+		<!--
+		<h4>only un-radio-button</h4>
+		<un-radio-button theme="vaadin-1" value="synthesizer" name="inst" label="Analog Synthesizer"></un-radio-button>
+		<un-radio-button theme="vaadin-1" value="guitar" name="inst" label="Electric guitar"></un-radio-button>
+		<un-radio-button theme="vaadin-1" value="piano" name="inst" label="Piano"></un-radio-button>
+		-->
+		<h4>un-radio-group with un-radio-buttons</h4>
+
+		<un-radio-group theme="w3schools" legend="What's your favorit instrument?" orientation="vertical">
+			<un-radio-button value="synthesizer" name="inst" label="Analog Synthesizer"></un-radio-button>
+			<un-radio-button value="guitar" name="inst" label="Electric guitar"></un-radio-button>
+			<un-radio-button value="piano" name="inst" label="Piano"></un-radio-button>
+		</un-radio-group>
+
+		<!--
+		<h4>un-radio-group with native buttons</h4>
+		<un-radio-group legend="What are your plans for this summer?" theme="vaadin-1">
+			<input type="radio" value="festival" name="plans" id="festival">
+			<label for="festival">Go to a techno festival</label>	
+			<input type="radio" value="mountains" id="mountains" name="plans">
+			<label for="mountains">Climb some mountains</label><br>
+			<input type="radio" value="money" id="money" name="plans">
+			<label for="money">Work hard as I need money</label><br>
+		</un-radio-group>
+		-->
+
+    </body>
+</html>
