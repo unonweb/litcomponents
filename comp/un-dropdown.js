@@ -4,13 +4,14 @@ import { UnButton } from "./un-button"
 export class UnDropDown extends LitElement {
     
     static styles = css`
+	/* UN-DROPDOWN */
+
 /* independent of theme */
 
 .drop-content {
 	display: none;
 	box-shadow: 1px 1px 10px #948d8d;
 	width: fit-content;
-	font-family: sans;
 	margin-top: 5px;
 	border-radius: 5px;
 	padding-top: 10px;
@@ -32,7 +33,105 @@ export class UnDropDown extends LitElement {
 	border: 1px solid #dbdbdb;
 }
 
-/* vaadin-1 theme */
+/* overlay */
+
+:host([overlay]) {
+	position: relative;
+}
+:host([overlay])
+.drop-content {
+	position: absolute;
+	background-color: white;
+	z-index: 3;
+}
+
+/* theme="manu-1" */
+
+:host([theme='manu-1']) 
+.drop-content {
+	font-size: medium;
+}
+:host([theme='manu-1'])
+::slotted(div) {
+  padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 5px;
+}
+
+/* theme="vaadin-1" */
+
+:host([theme='vaadin-1']) 
+.drop-content {
+	font-size: medium;
+}
+:host([theme='vaadin-1'])
+::slotted(div) {
+  padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 5px;
+}
+
+
+/* independent of theme */
+
+.drop-content {
+	display: none;
+	box-shadow: 1px 1px 10px #948d8d;
+	width: fit-content;
+	margin-top: 5px;
+	border-radius: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.drop-content.active {
+	display: block;
+}
+::slotted(div) {
+  border-radius: 5px;
+}
+::slotted(div:hover) {
+  background-color: #e4f0ff;
+	cursor: pointer;
+}
+::slotted(hr) {
+	border: 1px solid #dbdbdb;
+}
+
+/* overlay */
+
+:host([overlay]) {
+	position: relative;
+}
+:host([overlay])
+.drop-content {
+	position: absolute;
+	background-color: white;
+	z-index: 3;
+}
+
+/* theme="manu-1" */
+
+:host([theme='manu-1']) 
+.drop-content {
+	font-size: medium;
+}
+
+:host([theme='manu-1'])
+::slotted(div) {
+  padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 5px;
+}
+
+/* theme="vaadin-1" */
 
 :host([theme='vaadin-1']) 
 .drop-content {
@@ -48,7 +147,7 @@ export class UnDropDown extends LitElement {
 	border-radius: 5px;
 }
 
-/* vaadin-3 theme */
+/* theme="vaadin-3" */
 
 :host([theme='vaadin-3'])
 .drop-content {
@@ -67,6 +166,8 @@ export class UnDropDown extends LitElement {
 		openOn: { type: String, reflect: true },
 		title: { type: String, reflect: true },
 		theme: { type: String, reflect: true },
+		overlay: { type: Boolean, reflect: true },
+
 	}
 
     constructor() {
@@ -74,6 +175,7 @@ export class UnDropDown extends LitElement {
 		this.openOn = 'click'
 		this.title = 'menu'
 		this.theme = 'vaadin-1'
+		this.overlay = false
     }
 
 	connectedCallback() {

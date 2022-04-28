@@ -8,18 +8,32 @@
         <script type="module" src="main.js"></script>
 		<style>
 			@font-face {
-			font-family: 'NimbusSansReg';
-			src:  url('./fonts/NimbusSanL-Reg.otf') format('opentype');
+				font-family: 'NimbusSansReg';
+				src:  url('./fonts/NimbusSanL-Reg.otf') format('opentype');
+			}
+			@font-face {
+				font-family: 'Ubuntu';
+				src:  url('./fonts/ubuntu/Ubuntu-Regular.ttf') format('truetype');
 			}
 			html {
-			font-family: NimbusSansReg;
+				font-family: Ubuntu;
 			}
 		</style>
     </head>
     <body>
 
-		<h4>un-dropdown</h4>
-		<un-dropdown title="menu" theme="vaadin-1">
+		<un-menu-bar theme="manu" theme-dropdown="manu-1"></un-menu-bar>
+		
+		<p>
+„Putin glaubt ernsthaft an den Unsinn, den er im Fernsehen hört, und will einen großen Sieg erringen“, zitiert die FT eine ihrer insgesamt drei Quellen aus Russland. Diese sind dem Bericht zufolge über Gespräche des russischen Staatschefs informiert.
+Demnach vertraut Putin auf die Darlegungen seiner Generäle sowie Medienberichten zu Kriegsgeschehnissen. So sei er überzeugt, dass das russische Militär im Kampf um das Stahlwerk Azovstal in Mariupol keine Zivilisten angreife. Augenzeugen und westlichen Medien zufolge ist dies allerdings der Fall.
+Putin selbst hatte im März mehrere Gesetze unterzeichnet, die die Verbreitung „falscher“ Berichte über die russischen Streitkräfte unter Strafe stellen – so auch unvorteilhafte Entwicklungen im am 24. Februar begonnenen Ukraine-Krieg, den russische Staatsmedien als „militärische Spezialoperation“ titulieren.
+Argumentation der diplomatischen „Sackgasse“
+Pikant ist die Schilderung eines FT-Informanten, wonach Putin infolge ihm bekannter militärischer Rückschläge zwischenzeitlich ernsthaft ein Friedensabkommen mit der Ukraine erwogen habe. Ausdruck dessen seien Ende März die Verhandlungen beider Seiten in Istanbul gewesen. Damals hatten der Westen sowie die ukrainische Führung erhebliche Zweifel an der Aufrichtigkeit Russlands bei den Gesprächen geäußert.
+Doch nachdem der ukrainische Präsident Wolodymyr Selenskyj die russische Armee schwerer Kriegsverbrechen gegen Zivilisten in Butscha und Mariupol beschuldigt hatte und die „Moskwa“, das Flaggschiff der russischen Schwarzmeerflotte, durch ukrainischen Beschuss versenkt worden war, sei Putin dem Bericht zufolge wütend geworden und habe seine Ukraine-Strategie geändert.
+		</p>
+		<h4 id="un-dropdown">un-dropdown</h4>
+		<un-dropdown title="menu" theme="vaadin-1" overlay>
 			<div>Profile</div>
 			<div>Preferences</div>
 			<div>Community</div>
@@ -27,9 +41,12 @@
 			<div slot="last">Sign Out</div>
 		</un-dropdown>
 
-		<h4>un-button</h4>
-		<un-button theme="vaadin-1" btntxt="&#10005;"></un-button>
 
+		
+		<h4 id="un-button">un-button</h4>
+		<un-button theme="vaadin-1" btntxt="&#10005;"></un-button>
+		
+		<!--	
 		<h4>un-input</h4>
 		<un-input theme="vaadin-1" placeholder="message" type="text" label="Enter"></un-input>
 
@@ -45,12 +62,11 @@
 			<div>I have an accordion and am animating the height for a show reveal - the issue is the height which i need to set to auto as the information is different lengths.</div>
 		</un-accordion>
 
-		<!--
+		
 		<h4>only un-radio-button</h4>
 		<un-radio-button theme="vaadin-1" value="synthesizer" name="inst" label="Analog Synthesizer"></un-radio-button>
 		<un-radio-button theme="vaadin-1" value="guitar" name="inst" label="Electric guitar"></un-radio-button>
 		<un-radio-button theme="vaadin-1" value="piano" name="inst" label="Piano"></un-radio-button>
-		-->
 		<h4>un-radio-group with un-radio-buttons</h4>
 
 		<un-radio-group theme="w3schools" legend="What's your favorit instrument?" orientation="vertical">
@@ -59,7 +75,7 @@
 			<un-radio-button value="piano" name="inst" label="Piano"></un-radio-button>
 		</un-radio-group>
 
-		<!--
+		
 		<h4>un-radio-group with native buttons</h4>
 		<un-radio-group legend="What are your plans for this summer?" theme="vaadin-1">
 			<input type="radio" value="festival" name="plans" id="festival">
@@ -70,6 +86,7 @@
 			<label for="money">Work hard as I need money</label><br>
 		</un-radio-group>
 		-->
+
 
     </body>
 </html>

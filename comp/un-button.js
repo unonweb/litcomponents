@@ -3,9 +3,11 @@ import { LitElement, html, render, css } from "lit"
 export class UnButton extends LitElement {
     
 	static styles = css`
+
 /* UN-BUTTON */
 
 /* independent of theme */
+
 button {
     padding-top: 8px;
     padding-bottom: 8px;
@@ -19,19 +21,34 @@ button:active {
     transition-duration: 0.1s;
     transition-timing-function: ease-out;
 }
-button:focus {
-  outline: 2px solid #006af5ab;
-  outline-offset: 1px;
+
+/* theme='manu-1' */
+
+:host([theme='manu-1'])
+button {
+	background-color: white;
+  color: black;
+	font-size: medium;
+  /*! font-weight: bold; */
+}
+:host([theme='manu-1'])
+button:hover {
+  background-color: lightblue;
+  /*! color: #000; */
+}
+:host([theme='manu-1'])
+button:active {
+	background-color: lightgrey;
 }
 
-/* vaadin-1 */
+/* theme='vaadin-1' */
 
 :host([theme='vaadin-1'])
 button {
 	background-color: #006af5;
-  	color: white;
+  color: white;
 	font-size: medium;
-  	font-weight: bold;
+  font-weight: bold;
 }
 :host([theme='vaadin-1'])
 button:hover {
@@ -42,8 +59,13 @@ button:hover {
 button:active {
 	background-color: #006af5b3;
 }
+:host([theme='vaadin-1'])
+button:focus {
+  outline: 2px solid #006af5ab;
+  outline-offset: 1px;
+}
 
-/* vaadin-2 */
+/* theme='vaadin-2' */
 
 :host([theme='vaadin-2'])
 button {
@@ -59,8 +81,13 @@ button:hover {
 button:active {
     background-color: #006af526;
 }
+:host([theme='vaadin-2'])
+button:focus {
+  outline: 2px solid #006af5ab;
+  outline-offset: 1px;
+}
 
-/* vaadin-3 */
+/* theme='vaadin-3' */
 
 :host([theme='vaadin-3']) 
 button {
@@ -76,23 +103,28 @@ button:hover {
 button:active {
   background-color: #006af526;
 }
+:host([theme='vaadin-3'])
+button:focus {
+  outline: 2px solid #006af5ab;
+  outline-offset: 1px;
+}
 `
 
 	static properties = {
 		theme: { type: String, reflect: true },
-		btnTxt: { type: String, reflect: true },
+		title: { type: String, reflect: true },
 	}
 
     constructor() {
         super()
 		this.theme = 'vaadin-1'
-		this.btnTxt = 'click'
+		this.title = 'click'
     }
 
 	render() {
 		console.log('render() called')
 		return html`
-		<button>${this.btnTxt}</button>`
+		<button>${this.title}</button>`
 	}
 
     
