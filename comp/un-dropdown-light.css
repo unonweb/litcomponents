@@ -1,0 +1,85 @@
+/* UN-DROPDOWN-LIGHT */
+
+/* independent of theme */
+
+un-dropdown-light 
+.drop-content {
+	display: none;
+	box-shadow: 1px 1px 10px #948d8d;
+	width: fit-content;
+	margin-top: 5px;
+}
+un-dropdown-light 
+.drop-content.active {
+	display: block;
+}
+un-dropdown-light 
+div {
+  border-radius: 5px;
+}
+un-dropdown-light 
+div:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
+un-dropdown-light hr {
+	border: 1px solid #dbdbdb;
+}
+
+/* overlay */
+
+un-dropdown-light[overlay] {
+	position: relative;
+}
+un-dropdown-light[overlay]
+.drop-content {
+	position: absolute;
+	background-color: white;
+	z-index: 3;
+}
+
+/* theme="manu-1" */
+
+un-dropdown-light[theme='manu-1']
+.drop-content {
+	font-size: medium;
+}
+
+un-dropdown-light[theme='manu-1']
+div {
+  padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 5px;
+}
+
+/* theme="vaadin-1" */
+
+un-dropdown-light[theme='vaadin-1']
+.drop-content {
+	font-size: medium;
+}
+un-dropdown-light[theme='vaadin-1']
+div {
+  	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 5px;
+}
+
+/* theme="vaadin-3" */
+
+un-dropdown-light[theme='vaadin-3']
+.drop-content {
+	font-size: small;
+}
+
+un-dropdown-light[theme='vaadin-3']
+div {
+  	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
