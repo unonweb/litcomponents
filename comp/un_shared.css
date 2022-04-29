@@ -1,0 +1,75 @@
+:root {
+    --color-vaadin: hsl(214, 100%, 48%);
+    /* base color */
+    --colorBase-h: 214;
+    /* Farbe aus dem 360° Kreis */
+    --colorBase-s: 100%;
+    /* 0=Gray, 100=Farbe */
+    --colorBase-l: 48%;
+    /* 0=Black, 100=White */
+
+    /* modifiers */
+    --lighten-1: 20%;
+    --lighten-2: 10%;
+    --darken-4: 5%;
+    --darken-5: 10%;
+    /* primary */
+    --color-1: hsl(var(--colorBase-h), var(--colorBase-s), calc(var(--colorBase-l) + var(--lighten-1)));
+    --color-2: hsl(var(--colorBase-h), var(--colorBase-s), calc(var(--colorBase-l) + var(--lighten-2))); /* hover */
+    --color-3: hsl(var(--colorBase-h), var(--colorBase-s), var(--colorBase-l)); /* normal */
+    --color-4: hsl(var(--colorBase-h), var(--colorBase-s), calc(var(--colorBase-l) - var(--darken-4))); /* focus */
+    --color-5: hsl(var(--colorBase-h), var(--colorBase-s), calc(var(--colorBase-l) - var(--darken-5))); /* active */
+    /* 180 */
+    --color-1-180: hsl(calc(var(--colorBase-h) + 180), var(--colorBase-s), calc(var(--colorBase-l) + var(--lighten-1)));
+    --color-2-180: hsl(calc(var(--colorBase-h) + 180), var(--colorBase-s), calc(var(--colorBase-l) + var(--lighten-2)));
+    --color-3-180: hsl(calc(var(--colorBase-h) + 180), var(--colorBase-s), var(--colorBase-l));
+    --color-4-180: hsl(calc(var(--colorBase-h) + 180), var(--colorBase-s), calc(var(--colorBase-l) - var(--darken-4)));
+    --color-5-180: hsl(calc(var(--colorBase-h) + 180), var(--colorBase-s), calc(var(--colorBase-l) - var(--darken-5)));
+    /* 120 */
+    --color-1-120: hsl(calc(var(--colorBase-h) + 120), var(--colorBase-s), calc(var(--colorBase-l) + var(--lighten-1)));
+    --color-2-120: hsl(calc(var(--colorBase-h) + 120), var(--colorBase-s), calc(var(--colorBase-l) + var(--lighten-2)));
+    --color-3-120: hsl(calc(var(--colorBase-h) + 120), var(--colorBase-s), var(--colorBase-l));
+    --color-4-120: hsl(calc(var(--colorBase-h) + 120), var(--colorBase-s), calc(var(--colorBase-l) - var(--darken-4)));
+    --color-5-120: hsl(calc(var(--colorBase-h) + 120), var(--colorBase-s), calc(var(--colorBase-l) - var(--darken-5)));
+    /* 240 */
+    --color-1-240: hsl(calc(var(--colorBase-h) + 240), var(--colorBase-s), calc(var(--colorBase-l) + var(--lighten-1)));
+    --color-2-240: hsl(calc(var(--colorBase-h) + 240), var(--colorBase-s), calc(var(--colorBase-l) + var(--lighten-2)));
+    --color-3-240: hsl(calc(var(--colorBase-h) + 240), var(--colorBase-s), var(--colorBase-l));
+    --color-4-240: hsl(calc(var(--colorBase-h) + 240), var(--colorBase-s), calc(var(--colorBase-l) - var(--darken-4)));
+    --color-5-240: hsl(calc(var(--colorBase-h) + 240), var(--colorBase-s), calc(var(--colorBase-l) - var(--darken-5)));
+    /* grayscale */
+    --gray-1: #ebebeb;
+    /* disabled body */
+    --gray-2: #e0e0e0;
+    --gray-3: #c2c2c2;
+    --gray-4: #a1a1a1;
+    /* disabled font */
+    --gray-5: #757575;
+    --gray-6: black;
+
+    /* shadows */
+
+    /* inset | offset-x | offset-y | color */
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    --shadow-1: 0px 1px 5px 0px rgba(0, 0, 0, .24), 0px 2px 2px 0px rgba(0, 0, 0, .12), 0px 3px 3px -2px rgba(0, 0, 0, .08);
+    /* normal */
+    --shadow-2: 1px 2px 4px -1px rgba(0, 0, 0, .24), 0px 4px 5px 0px rgba(0, 0, 0, .12), 0px 1px 10px 0px rgba(0, 0, 0, .08);
+    /* hover */
+    --shadow-3: 0px 5px 5px -3px rgba(0, 0, 0, .24), 0px 8px 10px 1px rgba(0, 0, 0, .12), 0px 3px 14px 2px rgba(0, 0, 0, .08);
+    /* focused, pressed */
+}
+
+.color-showcase {
+    display: flex;
+    flex-flow: row;
+}
+.color-showcase div {
+    width: 50px;
+    height: 50px;
+}
+
+/* UTILITY CLASSES */
+
+.fx-lift-up {
+    transform: translateY(-1px); /* lift-up effect */
+}
